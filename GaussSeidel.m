@@ -1,9 +1,9 @@
-%Calculates solution for a linear system of equations using the Gauss–Seidel method:
+%Calculates solution for a linear system of equations using the Gaussâ€“Seidel method:
 %matrix A must be diagonally dominant.
 %Usage example: "s = GaussSeidel([8 1 6 ; 4 9 2 ; 3 5 7], [0.5 0.2 0.3], 0.00001)"
 
 %{
-	GaussSeidel: script to calculate a solution for a linear system of equations using the Gauss–Seidel method.
+	GaussSeidel: script to calculate a solution for a linear system of equations using the Gaussâ€“Seidel method.
     Copyright (C) 2017  NAD-EM
 
     This program is free software: you can redistribute it and/or modify
@@ -30,10 +30,6 @@ format long;
 
 [m,n] = size(A); % rows / columns
 s = zeros(1, n); % solution to the system
-%res = vec2mat(res, 1) % the equalities to the original system
-
-% first iteration goes by hand
-% s(1) = res(1, 1) / A(1, 1)
 
 temp = 0;
 CurrentError = 100;
